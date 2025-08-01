@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Travel - Crew</title>
+    <link rel="stylesheet" href="crew.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-logo">
+            <div class="logo-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2L13.09 8.26L20 9L13.09 9.74L12 16L10.91 9.74L4 9L10.91 8.26L12 2Z" fill="white"/>
+                </svg>
+            </div>
+        </div>
+        <div class="nav-menu">
+            <div class="nav-item">
+                <span class="nav-number">00</span>
+                <span class="nav-text">HOME</span>
+            </div>
+            <div class="nav-item">
+                <span class="nav-number">01</span>
+                <span class="nav-text">DESTINATION</span>
+            </div>
+            <div class="nav-item active">
+                <span class="nav-number">02</span>
+                <span class="nav-text">CREW</span>
+            </div>
+            <div class="nav-item">
+                <span class="nav-number">03</span>
+                <span class="nav-text">TECHNOLOGY</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="content-left">
+            <h2 class="page-subtitle">
+                <span class="page-number">02</span>
+                MEET YOUR CREW
+            </h2>
+            
+            <div class="crew-info">
+                <h3 class="crew-role" id="crew-role">FLIGHT ENGINEER</h3>
+                <h1 class="crew-name" id="crew-name">ANOUSHEH ANSARI</h1>
+                <p class="crew-bio" id="crew-bio">
+                    Anousheh Ansari is an Iranian American engineer and co-founder of Prodea Systems. Ansari was the fourth self-funded space tourist, the first self-funded woman to fly to the ISS, and the first Iranian in space.
+                </p>
+            </div>
+            
+            <div class="crew-navigation">
+                <div class="nav-dot active" data-crew="0"></div>
+                <div class="nav-dot" data-crew="1"></div>
+                <div class="nav-dot" data-crew="2"></div>
+                <div class="nav-dot" data-crew="3"></div>
+            </div>
+        </div>
+        
+        <div class="content-right">
+            <div class="crew-image-container">
+                <img src="image-anousheh-ansari.png" alt="Anousheh Ansari" class="crew-image" id="crew-image">
+            </div>
+        </div>
+    </main>
+
+    <!-- Background -->
+    <div class="background-image">
+        <img src="background-crew-desktop.jpg" alt="Space background" id="background-img">
+    </div>
+
+    <script src="crew.js"></script>
+</body>
+</html>

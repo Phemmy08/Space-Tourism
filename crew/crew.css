@@ -1,0 +1,401 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #0B0D17;
+    color: white;
+    overflow-x: hidden;
+    min-height: 100vh;
+    position: relative;
+}
+
+/* Background Image */
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.background-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.4;
+}
+
+/* Navigation */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 4rem;
+    z-index: 1000;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-icon {
+    width: 48px;
+    height: 48px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.logo-icon:hover {
+    transform: rotate(90deg);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.nav-menu {
+    display: flex;
+    gap: 3rem;
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(40px);
+    padding: 2rem 3rem;
+    border-radius: 0;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0.5rem 0;
+    border-bottom: 3px solid transparent;
+}
+
+.nav-item:hover {
+    border-bottom-color: rgba(255, 255, 255, 0.5);
+}
+
+.nav-item.active {
+    border-bottom-color: white;
+}
+
+.nav-number {
+    font-weight: bold;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+}
+
+.nav-text {
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    font-weight: 300;
+}
+
+/* Main Content */
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    min-height: 100vh;
+    padding: 8rem 4rem 0;
+    max-width: 1400px;
+    margin: 0 auto;
+    gap: 4rem;
+}
+
+.content-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-bottom: 4rem;
+}
+
+.page-subtitle {
+    font-size: 1.8rem;
+    letter-spacing: 4px;
+    color: white;
+    font-weight: 300;
+    margin-bottom: 4rem;
+    text-transform: uppercase;
+}
+
+.page-number {
+    color: rgba(255, 255, 255, 0.25);
+    font-weight: bold;
+    margin-right: 1.5rem;
+}
+
+.crew-info {
+    margin-bottom: 4rem;
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+.crew-role {
+    font-size: 2rem;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.5);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+}
+
+.crew-name {
+    font-size: 3.5rem;
+    font-weight: 100;
+    line-height: 0.9;
+    margin-bottom: 2rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.crew-bio {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #D0D6F9;
+    font-weight: 300;
+    max-width: 450px;
+}
+
+/* Crew Navigation Dots */
+.crew-navigation {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.nav-dot {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.17);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.nav-dot:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.nav-dot.active {
+    background: white;
+}
+
+/* Content Right - Crew Image */
+.content-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 100vh;
+    padding-top: 8rem;
+}
+
+.crew-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.crew-image {
+    max-width: 100%;
+    height: auto;
+    max-height: 80vh;
+    object-fit: cover;
+    object-position: center bottom;
+    transition: all 0.6s ease;
+    filter: brightness(1.1);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.content-left {
+    animation: slideInLeft 1s ease-out;
+}
+
+.content-right {
+    animation: slideUp 1s ease-out 0.3s both;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .crew-name {
+        font-size: 3rem;
+    }
+    
+    .crew-role {
+        font-size: 1.8rem;
+    }
+    
+    .main-content {
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 968px) {
+    .navbar {
+        padding: 1.5rem 2rem;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .nav-menu {
+        gap: 2rem;
+        padding: 1rem 2rem;
+    }
+    
+    .main-content {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 12rem 2rem 2rem;
+        gap: 2rem;
+        align-items: center;
+    }
+    
+    .content-left {
+        padding-bottom: 2rem;
+        align-items: center;
+    }
+    
+    .content-right {
+        height: 50vh;
+        padding-top: 2rem;
+    }
+    
+    .crew-name {
+        font-size: 2.5rem;
+    }
+    
+    .crew-role {
+        font-size: 1.5rem;
+    }
+    
+    .crew-bio {
+        text-align: center;
+        max-width: 100%;
+    }
+    
+    .crew-image {
+        max-height: 50vh;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-text {
+        display: none;
+    }
+    
+    .crew-name {
+        font-size: 2rem;
+    }
+    
+    .crew-role {
+        font-size: 1.2rem;
+    }
+    
+    .page-subtitle {
+        font-size: 1.5rem;
+    }
+    
+    .crew-bio {
+        font-size: 1rem;
+    }
+    
+    .nav-dot {
+        width: 12px;
+        height: 12px;
+    }
+    
+    .crew-navigation {
+        gap: 1rem;
+    }
+    
+    .content-right {
+        height: 40vh;
+    }
+    
+    .crew-image {
+        max-height: 40vh;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-content {
+        padding: 10rem 1rem 1rem;
+    }
+    
+    .crew-name {
+        font-size: 1.8rem;
+    }
+    
+    .crew-role {
+        font-size: 1rem;
+    }
+    
+    .page-subtitle {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+}

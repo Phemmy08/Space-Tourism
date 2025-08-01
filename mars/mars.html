@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Travel - Destinations</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-logo">
+            <div class="logo-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2L13.09 8.26L20 9L13.09 9.74L12 16L10.91 9.74L4 9L10.91 8.26L12 2Z" fill="white"/>
+                </svg>
+            </div>
+        </div>
+        <div class="nav-menu">
+            <div class="nav-item">
+                <span class="nav-number">00</span>
+                <a href="../index.html" class="nav-text">HOME</a>
+            </div>
+            <div class="nav-item active">
+                <span class="nav-number">01</span>
+                <a href="#" class="nav-text">DESTINATION</a>
+            </div>
+            <div class="nav-item">
+                <span class="nav-number">02</span>
+                <a href="../launch/launch.html" class="nav-text">CREW</a>
+            </div>
+            <div class="nav-item">
+                <span class="nav-number">03</span>
+                <a href="../launch/launch.html" class="nav-text">TECHNOLOGY</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="content-left">
+            <h2 class="page-subtitle">
+                <span class="page-number">01</span>
+                PICK YOUR DESTINATION
+            </h2>
+            
+            <div class="planet-container">
+                <img src="image-mars.png" alt="Mars Planet" class="planet-image" id="planet-img">
+            </div>
+        </div>
+        
+        <div class="content-right">
+            <div class="destination-tabs">
+                <button class="tab-button" data-planet="moon">MOON</button>
+                <button class="tab-button active" data-planet="mars">MARS</button>
+                <button class="tab-button" data-planet="europa">EUROPA</button>
+                <button class="tab-button" data-planet="titan">TITAN</button>
+            </div>
+            
+            <div class="destination-content">
+                <h1 class="destination-title" id="planet-name">MARS</h1>
+                
+                <p class="destination-description" id="planet-description">
+                    Don't forget to pack your hiking boots. You'll need them to tackle Olympus Mons, the tallest planetary mountain in our solar system. It's two and a half times the size of Everest!
+                </p>
+                
+                <div class="destination-stats">
+                    <div class="stat-item">
+                        <span class="stat-label">AVG. DISTANCE</span>
+                        <span class="stat-value" id="distance">225 MIL. KM</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">EST. TRAVEL TIME</span>
+                        <span class="stat-value" id="travel-time">9 MONTHS</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Background -->
+    <div class="background-image">
+        <img src="background-destination-desktop.jpg" alt="Space background" id="background-img">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
